@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css")
+    title Productos en Carrito
+    link(rel="stylesheet", href="/js/header.css")
+    link(rel="stylesheet" href="/js/carrito.css")
+    script(src="/js/carrito.js" defer)
+  body
+    header
+      h1 Alma mia
+      nav
+        a(href="http://localhost:3000/") Home
+    main
+      h1 Tus productos seleccionados:
+      ul(id="carrito-lista")
+      p(id="total-compra") Total de la compra: 
+      button(id="compra") comprar
+      script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js")

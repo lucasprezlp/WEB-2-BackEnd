@@ -1,0 +1,31 @@
+doctype html
+html   
+    head 
+        title Productos Fakes
+        link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css")
+        link(rel="stylesheet", href="/js/index.css")
+        script(src="/js/scripts.js" defer)
+    body 
+        header
+            h1 Alma mia
+            nav
+                a(href="http://localhost:3000/carrito") Ir al Carrito
+        main
+            .grilla
+                each producto in productos
+                    .producto
+                        if producto.descuento
+                            .oferta Oferta
+                        h5= producto.title
+                        p(class="descripcion", title=producto.description)= producto.description.length > 30 ? producto.description.substring(0, 30) + '...' : producto.description
+                        img(src=producto.image, width="200px")
+                        if producto.descuento
+                            h5 Precio original: #{producto.price}$
+                            h5 Descuento: #{producto.descuento}%
+                            h5 Monto descontado: #{producto.price * producto.descuento / 100}$
+                            h5 Precio final: #{producto.price - (producto.price * producto.descuento / 100)}$
+
+                        else
+                            h5 Precio: #{producto.price}$
+                        button.btn-agregar(id=producto.id, title=producto.title, price=producto.price, descuento=producto.descuento) Agregar al carrito
+        script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js")

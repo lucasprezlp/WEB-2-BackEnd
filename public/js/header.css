@@ -1,0 +1,30 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;   
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
